@@ -1,7 +1,19 @@
 #!/bin/bash
+
 sudo pacman -S install npm
 sudo pacman -S install git
-git clone https://github.com/AnimePub/AniPub.git
-cd AniPun
-npm install
+
+if [ -f ~/AniPub ] 
+then
+    echo "Found"
+    cd ~/AniPub
+    npm install
+else 
+    echo "Could n't find Anipub"
+    echo "Cloning Repo"
+    git clone https://github.com/AnimePub/AniPub.git
+    cd AniPub
+    npm install
+   
+fi
 npm run start
