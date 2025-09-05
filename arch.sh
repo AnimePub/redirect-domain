@@ -3,7 +3,7 @@
 sudo pacman -S install npm
 sudo pacman -S install git
 
-if [ -f ~/AniPub ] 
+if [ -v ~/AniPub ] 
 then
     echo "Found"
     cd ~/AniPub
@@ -12,7 +12,7 @@ else
     echo "Could n't find Anipub"
     echo "Cloning Repo"
     git clone https://github.com/AnimePub/AniPub.git
-    cd AniPub
+    cd ~/AniPub
     npm install
    
 fi
